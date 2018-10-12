@@ -1,0 +1,31 @@
+/**texture*/
+.il-color--texture {
+  &__default {
+    color: $primaryColor;
+  }
+  &__light {
+    color: $colorLight;
+  }
+  &__dark {
+    color: $colorDark;
+  }
+}
+
+/**background*/
+.il-color--background {
+  &__default {
+    background: $primaryColor;
+  }
+  &__accent {
+    background: $backAccent;
+  }
+  &__light {
+    background: $backLight;
+  }
+  &__medium {
+    background: $backMedium;
+  }
+  &__dark {
+    background: $backDark;
+  }
+}

@@ -1,0 +1,29 @@
+//base
+@import 'il-components/base/normalize';
+@include normalize();
+
+/*ICONs MDI*/
+
+@import 'mdi/materialdesignicons.scss';
+
+/*VARIABLES*/
+
+@import 'config/variables';
+
+/*GRID*/
+
+@import 'il-components/grid/geral';
+@import 'il-components/grid/grid';
+
+/*CONFIG*/
+
+@import 'config/tipography';
+
+/*THEME*/
+
+@import 'theme/colors';
+
+/*MODULES*/
+@import 'il-components/modules/header';
+@import 'il-components/modules/slider';
+@import 'il-components/modules/about';

@@ -1,0 +1,86 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  padding: 0;
+  &.il-section--title {
+    font-size: 1.4rem;
+    @media screen and (min-width: 641px) {
+      font-size: 1.7rem;
+    }
+    &.il-title--withicon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      padding-bottom: 0.75rem;
+      & i {
+        margin-bottom: 0.35rem;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        height: 3px;
+        width: 100px;
+        padding: 1px 0;
+        background: #ccab18;
+      }
+    }
+  }
+  &.il-section--sub-title {
+    font-size: 1.1rem;
+    font-weight: 300;
+    @media screen and (max-width: 360px) {
+      font-size: 1rem;
+    }
+  }
+  &.il-slider--title {
+    font-size: 1.2rem;
+    @media screen and (max-width: 360px) {
+      font-size: 0.95rem;
+    }
+    &.il-slider--big-title{
+      font-size: 3.5rem;
+      text-transform: uppercase;
+    }
+  }
+  &.il-slider--sub-title {
+    font-size: 1rem;
+    @media screen and (max-width: 360px) {
+      font-size: 0.89rem;
+    }
+  }
+  &.il-title--center{
+    text-align: center;
+  }
+  &.il-title--up{
+    text-transform: uppercase;
+  }
+  & span{
+    font-size: 110%;
+    font-weight: bolder;
+    margin-left: .45rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+p.il-description {
+  line-height: 1.3;
+  &--header {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,44 @@
+nav.il-nav {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  width: 48%;
+  height: 100vh;
+  background: $back-haeder-painel;
+  transition: $header-transition;
+  border-radius: 10% 0 0 0;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  align-content:center;
+  justify-items: center;
+  & ul.il-menu {
+    margin: 2rem;
+    padding: 2rem 0;
+    background: $secondColor;
+    height: calc(100% - 4rem);
+    border-radius: 10% 0 0 0;
+    width: calc(100% - 4rem);
+    & li.il-menu--item {
+      text-align: center;
+      & a.il-menu--link {
+        display: block;
+        padding: 1.35rem 0;
+        font-size: 20px;
+        color: $color-text-light;
+        text-transform: uppercase;
+        transition: $header-transition;
+        &:hover {
+          transition: $header-transition;
+          background: $hoverColor;
+          color: $colorDark;
+        }
+      }
+    }
+  }
+  &.il-nav--show {
+    right: 0;
+    transition: $header-transition;
+  }
+}
