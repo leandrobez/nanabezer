@@ -46,7 +46,7 @@
   }
   & .il-slider--navigation {
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     height: 40px;
     width: 100%;
     z-index: 20;
@@ -73,7 +73,7 @@
           display: block;
           border-radius: 50%;
           border: 2px solid $secondColor;
-          background: $color-text-light;
+          background: white;
           padding: 2px;
           cursor: pointer;
           transition: all 350ms ease-out;

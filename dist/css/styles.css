@@ -9444,6 +9444,94 @@ p.il-description--header {
   background: #693234;
 }
 
+a.il-btn.il-fixed--button {
+  text-align: center;
+  background-color: #ff2434;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  position: fixed;
+  bottom: 0px;
+  right: 15px;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 40px;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 3px 5px #888888;
+          box-shadow: 1px 3px 5px #888888;
+}
+
+a.il-btn.il-fixed--button i {
+  line-height: 50px;
+}
+
+a.il-btn.il-fixed--button.wobble {
+  -webkit-animation-name: wobble;
+          animation-name: wobble;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes wobble {
+  16.65% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    margin-bottom: 20px;
+  }
+}
+
+@keyframes wobble {
+  16.65% {
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+            transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    margin-bottom: 20px;
+  }
+}
+
 /*MODULES*/
 header.il-header {
   position: absolute;
@@ -9637,7 +9725,7 @@ header.il-header .il-portrait .il-portrait--content {
 
 .il-slider .il-slider--navigation {
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
   height: 40px;
   width: 100%;
   z-index: 20;
@@ -9680,7 +9768,7 @@ header.il-header .il-portrait .il-portrait--content {
   display: block;
   border-radius: 50%;
   border: 2px solid #995d5d;
-  background: #d78787;
+  background: white;
   padding: 2px;
   cursor: pointer;
   -webkit-transition: all 350ms ease-out;
@@ -9742,24 +9830,53 @@ header.il-header .il-portrait .il-portrait--content {
           animation: changeblur 5s infinite;
 }
 
+.il-about--content .il-about--body ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.il-about--content .il-about--body ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.il-about--content .il-about--body ul li a.il-information--link {
+  color: gold;
+  text-transform: uppercase;
+  -webkit-transition: all ease-in 450ms;
+  transition: all ease-in 450ms;
+}
+
+.il-about--content .il-about--body ul li a.il-information--link:hover {
+  -webkit-transition: all ease-in 450ms;
+  transition: all ease-in 450ms;
+  color: #e4d7d2;
+  font-weight: 500;
+  letter-spacing: 3px;
+  border-bottom: 1px solid #efefee;
+}
+
 @-webkit-keyframes changeblur {
   0% {
-    background: rgba(80, 80, 90, 0.7);
+    background: rgba(155, 155, 163, 0.7);
     background-blend-mode: screen;
   }
   100% {
-    background: rgba(80, 80, 90, 0.2);
+    background: rgba(155, 155, 163, 0.7);
     background-blend-mode: lighten;
   }
 }
 
 @keyframes changeblur {
   0% {
-    background: rgba(80, 80, 90, 0.7);
+    background: rgba(155, 155, 163, 0.7);
     background-blend-mode: screen;
   }
   100% {
-    background: rgba(80, 80, 90, 0.2);
+    background: rgba(155, 155, 163, 0.7);
     background-blend-mode: lighten;
   }
 }
