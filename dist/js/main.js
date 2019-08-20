@@ -21,6 +21,32 @@ let ilBtn = document.querySelector('.il-btn--mobil'),
   navPainel = document.querySelector('.il-nav'),
   showNavPainel = false;
 
+/**nav float */
+let btnFloat = document.getElementById('#il-header');
+let navFloat = document.querySelector('.il-float--menu');
+let showFloat = false;
+let spanLink = document.querySelectorAll('.il-span--link');
+
+spanLink.forEach((item) => {
+  
+  item.addEventListener('click', () => {
+    navFloat.classList.remove('float-show');
+    showFloat = false;
+  })
+})
+
+btnFloat.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (!showFloat) {
+    navFloat.classList.add('float-show');
+    showFloat = true;
+  } else {
+    navFloat.classList.remove('float-show');
+    showFloat = false;
+  }
+  console.log(showFloat)
+});
+
 ilBtn.addEventListener('click', () => {
   if (!showNavPainel) {
     navPainel.classList.add('il-nav--show');
@@ -29,13 +55,42 @@ ilBtn.addEventListener('click', () => {
     showNavPainel = true;
   } else {
     navPainel.classList.remove('il-nav--show');
-    portraitPanel.classList.remove('il-portrait--show');    
+    portraitPanel.classList.remove('il-portrait--show');
     opacityPanel.classList.remove('il-slider--opac__slider');
     showNavPainel = false;
   }
 });
 /**Inicia os sliders */
 function init() {
+  let ilHash = window.location.hash;
+
+  const elementAbout = document.querySelector('.il-section--about');
+  if (ilHash == '#about') {
+    elementAbout.classList.add('animated', 'bounceInLeft');
+  } else {
+    elementAbout.classList.remove('animated', 'bounceInLeft');
+  }
+
+  const elementVideo = document.querySelector('.il-section--video');
+  if (ilHash == '#videos') {
+    elementVideo.classList.add('animated', 'fadeInDownBig');
+  } else {
+    elementVideo.classList.remove('animated', 'fadeInDownBig');
+  }
+
+  const elementProfile = document.querySelector('.il-section--profile');
+  if (ilHash == '#profile') {
+    elementProfile.classList.add('animated', 'fadeInUp');
+  } else {
+    elementProfile.classList.remove('animated', 'fadeInUp');
+  }
+
+  const elementContact = document.querySelector('.il-section--contact');
+  if (ilHash == '#contact') {
+    elementContact.classList.add('animated', 'rotateInDownLeft');
+  } else {
+    elementContact.classList.remove('animated', 'rotateInDownLeft');
+  }
   /*reconfigura os sliders*/
   const restartSlider = index => {
     clearTimeout(restart);

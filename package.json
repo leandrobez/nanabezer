@@ -1,15 +1,19 @@
 {
-  "name": "nasa",
+  "name": "nanabezer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel ./src/index.html .src/profile.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "parcel-bundler": "^1.12.3"
   }
 }

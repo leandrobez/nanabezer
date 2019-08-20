@@ -5,6 +5,13 @@ var ClientJSOrigin = './src/js/';
 var ClientHtmlOrigin = './src/';
 var PathDest = './dist/';
 
+
+gulp.task('animateCss', () => {
+  var CssOrigin = './node_modules/animate.css/animate.min.css';
+  var CssDest = PathDest + 'css/';
+
+  gulp.src(CssOrigin).pipe(gulp.dest(CssDest));
+});
 /* Cópia de arquivos css */
 
 gulp.task('copyStyles', () => {

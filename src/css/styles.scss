@@ -1,0 +1,276 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Yanone+Kaffeesatz');
+
+body {
+  line-height: 1.4;
+  font-family: 'Abel', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.il-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  header#section1 {
+    height: 100vh;
+    background: #0f2027; /* fallback for old browsers */
+    background: linear-gradient(
+      to left,
+      #3c6374,
+      #2e3f44,
+      #1c4050
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    nav {
+      position: relative;
+      min-height: 5vh;
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      width: 100%;
+      padding: 0 5%;
+      margin: 0 auto;
+      color: white;
+      .il-menu--hamburger {
+        margin-top: 10px;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: 550ms ease-in-out;
+        &:hover .il-line {
+          transition: 550ms ease-in-out;
+          background: rgb(13, 4, 27);
+          box-shadow: 2px 0px 3px rgba(195, 208, 211, 0.8);
+        }
+        span.il-line {
+          display: block;
+          width: 28px;
+          height: 2px;
+          background: white;
+
+          &:nth-child(1) {
+            width: 10px;
+          }
+          &:nth-child(2) {
+            width: 20px;
+          }
+        }
+      }
+      .il-painel {
+        position: absolute;
+        width: 100%;
+        height: 20vh;
+        left: -100%;
+        top: 5vh;
+        padding: 5% 10%;
+        background: #1c4050;
+        display: flex;
+        justify-content: space-between;
+        z-index: 3;
+        transition: 650ms ease-in-out;
+        box-shadow: 2px 0px 7px rgba(43, 52, 82, 0.795);
+        .il-contact,
+        .il-social {
+          height: 10vh;
+          color: rgb(236, 221, 157);
+          h3 {
+            padding: 0.65rem 0;
+          }
+          ul {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            justify-content: space-between;
+            svg {
+              width: 24px;
+              height: 24px;
+              cursor: pointer;
+            }
+          }
+        }
+        &.il-painel--open {
+          transition: 650ms ease-in-out;
+          left: 0%;
+        }
+      }
+    }
+
+    main {
+      height: 100%;
+      position: relative;
+      section {
+        color: white;
+        min-height: 90vh;
+        display: grid;
+        grid-template-columns: 5% 1fr 1fr 1fr 5%;
+        overflow: hidden;
+        .il-profile {
+          grid-column: 2/3;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          h3 {
+            padding: 20px 0;
+            font-size: 30px;
+            text-transform: uppercase;
+          }
+          h4 {
+            padding: 10px 0;
+            font-size: 20px;
+          }
+          p {
+            padding: 10px 0 50px 0;
+          }
+        }
+        .il-picture {
+          grid-column: 3/4;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          justify-items: center;
+          cursor: pointer;
+          overflow: hidden;
+          &:hover {
+            transition: 600ms ease-in-out;
+            transition-delay: 450ms;
+            //border-radius: 37%;
+            //box-shadow: 2px 3px 7px rgba(196, 169, 155, 0.5);
+            transform: scale(1.1);
+          }
+          .il-picture-left {
+            transform: translate(-15px, -20px);
+            transition: 600ms ease-in-out;
+          }
+          .il-picture-right {
+            transform: translate(15px, 20px);
+            transition: 600ms ease-in-out;
+          }
+          &:hover .il-picture-left,
+          &:hover .il-picture-right {
+            transform: translate(0%, 0%);
+            opacity: 1;
+            transition: 600ms ease-in-out;
+          }
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+        &#section2 {
+          height: 100vh;
+          background: #1f3c49;
+          background: linear-gradient(to left, #37748f, #244b58, #112e3a);
+        }
+        &#section3 {
+          height: 100vh;
+          background: #1f3c49; /* fallback for old browsers */
+          //background: linear-gradient(to left, #297b9e, #1a4b5c, #0c384b);
+          background-image: linear-gradient(to right, #1f3c49 0%, #596164 100%);
+        }
+      }
+      .il-navegation {
+        position: fixed;
+        color: white;
+        width: 150px;
+        height: 100vh;
+        top: 25%;
+        right: 80px;
+        ul li {
+          height: 50px;
+          list-style: none;
+          font-size: 22px;
+          padding: 12px 0;
+          display: flex;
+          justify-content: space-around;
+          text-align: left;
+          span {
+            display: block;
+            text-align: left;
+            width: 120px;
+            cursor: pointer;
+            &:hover {
+              color: yellow;
+            }
+          }
+          span.il-link {
+            cursor: pointer;
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: 1px solid gray;
+            border-radius: 50%;
+            background: #4eaccc;
+            position: relative;
+            animation: hidden 650ms infinite ease-in-out alternate;
+            animation-delay: 649ms;
+
+            &:after {
+              content: '';
+              top: 9px;
+              left: 9px;
+              position: absolute;
+              width: 10px;
+              height: 10px;
+              background: #1e233d;
+              border-radius: 50%;
+              animation: pulse 650ms infinite ease-in-out alternate;
+            }
+            &:hover {
+              border: 2px solid rgb(41, 36, 36);
+            }
+            &:hover:after {
+              top: 8px;
+              left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  main.secondary {
+    position: relative;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background: #1e233d;
+  }
+  100% {
+    transform: scale(2.1);
+    background: rgb(24, 96, 105);
+  }
+}
+
+@keyframes hidden {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: #4eaccc;
+  }
+}
